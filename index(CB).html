@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>UFO Finder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">UFO Sightings
+            <img class="nav-ufo" src="static/images/ufo.svg">
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div class="hero text-center">
+      <h1>UFO Sightings</h1>
+      <p>The Truth is Out There</p>
+    </div>
+    <div class="container">
+      <div class="row margin-top-50">
+        <div class="col-md-2">
+          <aside class="filters">
+            <div class="panel panel-default">
+              <div class="panel-heading">Filter Search</div>
+              <div class="panel-body">
+                <form>
+                  <div class="form-group">
+                    <ul class="list-group" id="filters">
+                      <li class="filter list-group-item">
+                        <label for="date">Enter a Date</label>
+                        <input class="form-control" id="datetime" type="text" placeholder="1/11/2011" onkeyup = "myFilter()">
+
+                        <!-- Start --input parameters that allow you to search specific columns  -->
+                        <label for="date">Enter a City</label>
+                        <input class="form-control" id="city" type="text" placeholder="City Name" onkeyup = "myFilter2()">
+                        <label for="date">Enter a State</label>
+                        <input class="form-control" id="state" type="text" placeholder="2 Letter State Designation" onkeyup = "myFilter3()">
+                        <label for="date">Enter a Country</label>
+                        <input class="form-control" id="country" type="text" placeholder="2 Letter Country Designation" onkeyup = "myFilter4()">
+                        <label for="date">Enter a UFO formation shape</label>
+                        <input class="form-control" id="shape" type="text" placeholder="triangle" onkeyup = "myFilter5()">
+                        <label for="date">Enter a Duration Time</label>
+                        <input class="form-control" id="durationMinutes" type="text" placeholder="3 minutes" onkeyup = "myFilter6()">
+
+
+
+
+
+
+                        <!-- Start --input parameters that allow you to search specific columns  -->  
+
+                      <!-- Start - input for critera to filter by using checkboxes. Could Not make work... -->
+<!-- 
+                        <li><a>
+                          <label class="filter" for="filter1">
+                          <input id="date" type="checkbox" name= critera value="date"/>Date</label>
+                        </a></li>
+                        <li><a>
+                          <label class="filter" for="filter1">                        
+                          <input id="city" type="checkbox" name= critera value="city" />City</label>                        
+                        </a></li>
+                        <li><a>                        
+                          <label class="filter" for="filter1">                        
+                          <input id="state" type="checkbox" name= critera value="state" />State</label>                        
+                        </a></li>
+                        <li><a>                       
+                          <label class="filter" for="filter1">
+                          <input id="shape" type="checkbox" name= critera  value = "shape"/>Shape</label>
+                        </a></li>
+                        <li><a>                       
+                          <label class="filter" for="filter1">
+                          <input id="duration" type="checkbox" name= critera value ="duration"/>Duration</label>
+                        </a></li> -->
+
+                      <!-- End - input for critera to filter by using checkboxes. Could Not make work... -->
+
+
+                      </li>
+                    </ul>
+                  </div>
+                  <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button>
+                </form>
+              </div>
+            </div>
+          </aside>
+        </div>
+        <div class="col-md-10">
+          <div id="table-area" class="">
+            <table id="ufo-table" class="table table-striped">
+              <thead>
+                <tr>
+                  <th class="table-head">Date</th>
+                  <th class="table-head">City</th>
+                  <th class="table-head">State</th>
+                  <th class="table-head">Country</th>
+                  <th class="table-head">Shape</th>
+                  <th class="table-head">Duration</th>
+                  <th class="table-head">Comments</th>
+                </tr>
+                <!-- <tr>
+                    <td>Paris specialites</td>
+                    <td>France</td>
+                </tr>
+                <tr>
+                  <td>North/South</td>
+                  <td>UK</td>
+                </tr> -->
+
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <span class="bottom">UFO Sightings</span>
+    </footer>
+  </div>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="static/js/data (CB).js"></script>
+  <script src="static/js/app (CB).js"></script>
+
+ 
+
+</body>
+
+</html>
